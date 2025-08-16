@@ -10,7 +10,7 @@ uploadForm.addEventListener('submit', async (e) => {
   formData.append('prompt', document.getElementById('prompt').value);
 
   try {
-    const response = await fetch('http://localhost:3000/generate-summary', {
+    const response = await fetch('https://meeting-summarizer-8kjq.onrender.com/generate-summary', {
       method: 'POST',
       body: formData
     });
@@ -29,7 +29,7 @@ shareBtn.addEventListener('click', async () => {
   const recipients = document.getElementById('recipients').value;
 
   try {
-    const response = await fetch('http://localhost:3000/send-email', {
+    const response = await fetch('https://meeting-summarizer-8kjq.onrender.com/send-email', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ summary, recipients })
