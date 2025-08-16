@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Meeting Summarizer</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>AI Meeting Notes Summarizer</h1>
+  <form id="uploadForm">
+    <label for="transcript">Upload Transcript (.txt):</label>
+    <input type="file" id="transcript" accept=".txt" required><br>
+    <label for="prompt">Custom Prompt:</label>
+    <input type="text" id="prompt" placeholder="e.g., Summarize in bullet points"><br>
+    <button type="submit">Generate Summary</button>
+  </form>
+  <div id="summarySection" style="display:none;">
+    <h2>Generated Summary (Editable)</h2>
+    <textarea id="summary" rows="10" cols="50"></textarea><br>
+    <label for="recipients">Recipient Emails (comma-separated):</label>
+    <input type="text" id="recipients" placeholder="email1@example.com,email2@example.com"><br>
+    <button id="shareBtn">Share via Email</button>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
